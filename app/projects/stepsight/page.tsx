@@ -12,6 +12,11 @@ export const metadata: Metadata = {
 };
 
 const REPO = "https://github.com/nive62tech/step-sight/tree/implementation/desktop-guide";
+const POST =
+  "https://www.linkedin.com/posts/inaiyarhasnain_openai-devday-kochi-activity-7516025052786630656-bagp";
+const DOWNLOAD_PAGE = "https://d30cb15ggw36n1.cloudfront.net/#download";
+
+const team = ["Naiyar Hasnain", "Adarsh Viswam", "Niveditha Sathish Nair", "Ashique Khan S"];
 
 const stats = [
   { value: "Overnight", label: "all-night hackathon" },
@@ -219,13 +224,26 @@ export default function StepSight() {
               View on GitHub
             </a>
             <a
-              href="https://github.com/nive62tech/step-sight/tree/implementation/desktop-guide#desktop-guide"
+              href={DOWNLOAD_PAGE}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary !w-auto"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download Windows Pilot
+            </a>
+            <a
+              href={POST}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary !w-auto"
             >
               <ArrowUpRight />
-              Implementation Docs
+              LinkedIn Post
             </a>
           </div>
         </header>
@@ -421,6 +439,59 @@ export default function StepSight() {
                 <p className="mt-2 text-[14px] leading-relaxed text-body">{l.body}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* ── Download & Try ───────────────────────────── */}
+        <section>
+          <SectionHeading>download &amp; live pilot.</SectionHeading>
+          <div className="surface-soft flex flex-col justify-between gap-4 p-5 sm:flex-row sm:items-center sm:p-6">
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#059669]">
+                Public Release · Windows x64
+              </p>
+              <h3 className="mt-1 font-serif text-[20px] font-semibold text-ink">
+                Desktop Guide (StepSight) Portable Pilot
+              </h3>
+              <p className="mt-1 text-[13px] text-mute">
+                Available as a portable ZIP package with visual cursor guidance, autonomous pilot mode, and cloud-backed Gemini inference.
+              </p>
+            </div>
+            <div className="flex flex-none items-center gap-2">
+              <a
+                href={DOWNLOAD_PAGE}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary !w-auto"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download Page
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Team & Thanks ────────────────────────────── */}
+        <section>
+          <SectionHeading>the team &amp; thanks.</SectionHeading>
+          <div className="surface-soft p-5 sm:p-6">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-faint">
+              Builders
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {team.map((name) => (
+                <span key={name} className="chip font-medium text-ink">
+                  {name}
+                </span>
+              ))}
+            </div>
+            <p className="mt-4 text-[13px] leading-relaxed text-mute">
+              Special thanks to Ashique Khan S, Adarsh Viswam, and Niveditha Sathish Nair for an unreal night of building, and to Vaishakh Suresh and the OpenAI DevDay Exchange Kochi team for hosting an incredible event.
+            </p>
           </div>
         </section>
 
