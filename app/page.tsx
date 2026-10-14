@@ -21,7 +21,7 @@ const events = [
     href: "/projects/stepsight",
     cta: "See the full build log →",
     images: [
-      { src: "/stepsight/desktop-control-render.png", alt: "StepSight desktop companion interface and visual guidance overlay" },
+      { src: "/stepsight/event-banner.jpg", alt: "At OpenAI DevDay Exchange Community Event in Kochi, Kerala" },
     ],
   },
   {

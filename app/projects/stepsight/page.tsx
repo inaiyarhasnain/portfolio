@@ -230,6 +230,14 @@ export default function StepSight() {
           </div>
         </header>
 
+        {/* ── Event Venue Banner ───────────────────────── */}
+        <Photo
+          src="/stepsight/event-banner.jpg"
+          alt="At the OpenAI DevDay Exchange Community Event in Kochi, Kerala"
+          ratio="aspect-[4/5] sm:aspect-[16/10]"
+          caption="OpenAI DevDay Exchange Community Event, Kochi, Kerala. Ready for the all-night hackathon."
+        />
+
         {/* ── Stats Strip ──────────────────────────────── */}
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {stats.map((s) => (
@@ -371,6 +379,35 @@ export default function StepSight() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── Overnight Hackathon Sprint ──────────────── */}
+        <section>
+          <SectionHeading>the overnight sprint in kochi.</SectionHeading>
+          <p className="font-serif text-[24px] leading-snug text-ink">
+            Building through the night,{" "}
+            <em className="text-[#059669]">from scratch to demo</em>.
+          </p>
+          <p className="mt-3 text-[15px] leading-relaxed text-body">
+            We arrived in Kochi for the OpenAI DevDay Exchange hackathon ready to build something ambitious.
+            From midnight brainstorming to connecting high-performance Windows Graphics Capture and wiring
+            up multimodal vision prompts, the entire team pushed through the night until the companion
+            guided its first live application before sunrise.
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <Photo
+              src="/stepsight/team-at-work.jpg"
+              alt="The team hacking through the night around the table in Kochi"
+              ratio="aspect-[4/5]"
+              caption="The team at the hackathon table in Kochi, pushing through the all-night build."
+            />
+            <Photo
+              src="/stepsight/at-work.jpg"
+              alt="Naiyar and teammate deep in code debugging the C# client and inference loop"
+              ratio="aspect-[4/5]"
+              caption="Deep in code: tuning C# Avalonia UI hooks and the Gemini multimodal vision loop."
+            />
           </div>
         </section>
 
