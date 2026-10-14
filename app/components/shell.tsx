@@ -79,10 +79,10 @@ function Profile() {
           </p>
           <p>
             Built{" "}
-            <Link href="/projects/pawbridge" className="link-u font-medium">
-              PawBridge
+            <Link href="/projects/stepsight" className="link-u font-medium">
+              StepSight
             </Link>{" "}
-            at Claude Build Day
+            at OpenAI DevDay Kochi
           </p>
           <p className="text-mute">Bengaluru, India</p>
         </div>

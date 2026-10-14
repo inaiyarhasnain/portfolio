@@ -6,8 +6,24 @@ import { ArrowUpRight, GitHubIcon } from "./components/socials";
 /* ── Data ──────────────────────────────────────────────────── */
 
 const RESQ_REPO = "https://github.com/inaiyarhasnain/ResQGrid";
+const STEPSIGHT_REPO = "https://github.com/nive62tech/step-sight/tree/implementation/desktop-guide";
 
 const events = [
+  {
+    title: "OpenAI DevDay Exchange Hackathon · Kochi",
+    place: "Kochi, Kerala",
+    date: "10–11 Oct 2026",
+    points: [
+      "Travelled to Kochi, Kerala for an intense overnight hackathon at OpenAI DevDay Exchange, building StepSight from scratch through the night.",
+      "Engineered an intelligent Windows desktop companion that uses multimodal vision models to guide users through desktop and browser tasks step-by-step, or autonomously pilot workflows with strict safety boundaries.",
+      "Implemented a C# Avalonia desktop client with Windows Graphics Capture and Win32 hooks, paired with a FastAPI backend and a mobile companion PWA for remote control.",
+    ],
+    href: "/projects/stepsight",
+    cta: "See the full build log →",
+    images: [
+      { src: "/stepsight/desktop-control-render.png", alt: "StepSight desktop companion interface and visual guidance overlay" },
+    ],
+  },
   {
     title: "Claude Build Day · Team Techno Crackers",
     place: "Claude Creator Commons, Bengaluru",
@@ -97,6 +113,61 @@ export default function Home() {
         <section id="projects" className="anim-fade-up scroll-mt-20">
           <SectionHeading>projects.</SectionHeading>
           <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2">
+            {/* StepSight */}
+            <article className="group flex flex-col">
+              <Link href="/projects/stepsight" className="block">
+                <div className="shot">
+                  <div className="shot-bar"><span /><span /><span /></div>
+                  <div className="relative aspect-[16/9] bg-[#f6f6f6]">
+                    <Image
+                      src="/stepsight/desktop-control-render.png"
+                      alt="StepSight: visual desktop companion and autonomous guide"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      unoptimized
+                      className="object-cover object-center"
+                    />
+                  </div>
+                </div>
+              </Link>
+              <div className="flex items-start justify-between gap-3 pt-4">
+                <h3 className="min-w-0 text-[16px] font-semibold leading-snug tracking-[-0.02em] text-ink">
+                  <Link href="/projects/stepsight">StepSight</Link>
+                  <span className="ml-2 rounded-full border border-[#059669]/40 bg-[#059669]/10 px-2 py-0.5 align-middle text-[10px] font-medium text-[#047857]">
+                    Hackathon · Team
+                  </span>
+                </h3>
+                <a
+                  href={STEPSIGHT_REPO}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="StepSight on GitHub"
+                  className="flex-none pt-0.5 text-[#bbb] transition-colors hover:text-ink [&>svg]:h-4 [&>svg]:w-4"
+                >
+                  <GitHubIcon />
+                </a>
+              </div>
+              <p className="mt-1.5 text-[14px] leading-relaxed text-mute">
+                A visual desktop copilot &amp; autonomous agent built overnight at OpenAI DevDay
+                Exchange in Kochi, Kerala. Multimodal vision models guide users through complex desktop
+                and browser workflows step-by-step or safely pilot actions.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {["C#", "Avalonia 12", ".NET 10", "Python", "FastAPI", "Gemini Vision", "AWS"].map((t) => (
+                  <span key={t} className="rounded bg-ink/[0.04] px-2 py-0.5 font-mono text-[11px] text-body">
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <Link
+                href="/projects/stepsight"
+                className="mt-3 inline-flex w-fit items-center gap-1 text-[13px] font-medium text-ink [&>svg]:h-3.5 [&>svg]:w-3.5"
+              >
+                Read the build log
+                <span className="transition-transform group-hover:translate-x-0.5">→</span>
+              </Link>
+            </article>
+
             {/* PawBridge */}
             <article className="group flex flex-col">
               <Link href="/projects/pawbridge" className="block">
