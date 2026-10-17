@@ -118,7 +118,7 @@ export default function Home() {
               <Link href="/projects/stepsight" className="block">
                 <div className="shot">
                   <div className="shot-bar"><span /><span /><span /></div>
-                  <div className="relative aspect-[16/9] bg-[#f6f6f6]">
+                  <div className="relative aspect-[16/9] bg-line/30">
                     <Image
                       src="/stepsight/desktop-control-render.png"
                       alt="StepSight: visual desktop companion and autonomous guide"
@@ -173,7 +173,7 @@ export default function Home() {
               <Link href="/projects/pawbridge" className="block">
                 <div className="shot">
                   <div className="shot-bar"><span /><span /><span /></div>
-                  <div className="relative aspect-[16/9] bg-[#f6f6f6]">
+                  <div className="relative aspect-[16/9] bg-line/30">
                     <Image
                       src="/pawbridge/device.jpg"
                       alt="The PawBridge device: sensors, buzzer and LCD inside a hand-labelled cardboard box"
@@ -221,7 +221,7 @@ export default function Home() {
               <Link href="/projects/resqgrid" className="block">
                 <div className="shot">
                   <div className="shot-bar"><span /><span /><span /></div>
-                  <div className="relative aspect-[16/9] bg-[#f6f6f6]">
+                  <div className="relative aspect-[16/9] bg-line/30">
                     <Image
                       src="/resqgrid/user.jpg"
                       alt="ResQGrid resident help desk: emergency directory and SOS request form"
@@ -275,7 +275,7 @@ export default function Home() {
               >
                 <div className="shot">
                   <div className="shot-bar"><span /><span /><span /></div>
-                  <div className="relative flex aspect-[16/9] flex-col justify-between overflow-hidden bg-gradient-to-br from-[#f7f7f5] to-[#ecebe6] p-5">
+                  <div className="relative flex aspect-[16/9] flex-col justify-between overflow-hidden bg-gradient-to-br from-[#f7f7f5] to-[#ecebe6] dark:from-[#1a1a18] dark:to-[#141412] p-5">
                     <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-faint">
                       full-stack · e-commerce
                     </p>
@@ -284,7 +284,7 @@ export default function Home() {
                     </p>
                     <div className="flex flex-wrap gap-1.5">
                       {["Spring Boot", "JWT", "React", "Redis", "MySQL"].map((t) => (
-                        <span key={t} className="rounded bg-white/80 px-2 py-0.5 font-mono text-[10px] text-body">
+                        <span key={t} className="rounded bg-white/80 dark:bg-white/10 px-2 py-0.5 font-mono text-[10px] text-body">
                           {t}
                         </span>
                       ))}
@@ -323,7 +323,7 @@ export default function Home() {
           {events.map((e) => (
             <article key={e.title} className="relative pl-5">
               <span aria-hidden="true" className="absolute bottom-1 left-0 top-2 w-px bg-line" />
-              <span aria-hidden="true" className="absolute left-[-3.5px] top-[9px] h-2 w-2 rounded-full border-[1.5px] border-ink bg-white" />
+              <span aria-hidden="true" className="absolute left-[-3.5px] top-[9px] h-2 w-2 rounded-full border-[1.5px] border-ink bg-paper" />
               <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
                 <h3 className="text-[15px] font-semibold text-ink">{e.title}</h3>
                 <span className="text-[13px] tabular-nums text-mute">{e.date}</span>
@@ -340,7 +340,7 @@ export default function Home() {
               {e.images.length > 0 && (
                 <div className="mt-4 grid max-w-[260px] grid-cols-1 gap-2">
                   {e.images.map((img) => (
-                    <div key={img.src} className="relative aspect-[4/5] overflow-hidden rounded-lg border border-line bg-[#f6f6f6]">
+                    <div key={img.src} className="relative aspect-[4/5] overflow-hidden rounded-lg border border-line bg-line/20">
                       <Image src={img.src} alt={img.alt} fill sizes="(max-width: 640px) 50vw, 160px" unoptimized className="object-cover" />
                     </div>
                   ))}
@@ -366,7 +366,7 @@ export default function Home() {
             {education.map((item) => (
               <article key={item.title} className="relative pl-5">
                 <span aria-hidden="true" className="absolute bottom-1 left-0 top-2 w-px bg-line" />
-                <span aria-hidden="true" className="absolute left-[-3.5px] top-[9px] h-2 w-2 rounded-full border-[1.5px] border-ink bg-white" />
+                <span aria-hidden="true" className="absolute left-[-3.5px] top-[9px] h-2 w-2 rounded-full border-[1.5px] border-ink bg-paper" />
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
                   <h3 className="text-[15px] font-semibold text-ink">{item.title}</h3>
                   <span className="text-[13px] tabular-nums text-mute">{item.date}</span>
@@ -407,7 +407,7 @@ export default function Home() {
         {/* ── Certificates ─────────────────────────────── */}
         <section id="certificates">
           <SectionHeading>certificates.</SectionHeading>
-          <ul className="divide-y divide-[#eee]">
+          <ul className="divide-y divide-line">
             {certificates.map((item) => (
               <li key={item.title}>
                 <a

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { EMAIL, GITHUB_HANDLE, GitHubIcon, MailIcon, socials } from "./socials";
+import { ThemeToggle } from "./theme-toggle";
 
 const navLinks = [
   { href: "/#projects", label: "projects" },
@@ -15,7 +16,7 @@ function Profile() {
         <Link
           href="/"
           aria-label="Go home"
-          className="relative h-16 w-16 flex-none overflow-hidden rounded-full bg-[#f5f5f5] shadow-[0_2px_8px_rgba(0,0,0,0.06)] ring-1 ring-[#e8e8e8] ring-offset-2 ring-offset-paper"
+          className="relative h-16 w-16 flex-none overflow-hidden rounded-full bg-line/30 shadow-[0_2px_8px_rgba(0,0,0,0.06)] ring-1 ring-line ring-offset-2 ring-offset-paper"
         >
           <Image src="/avatar.png" alt="Naiyar Hasnain" fill sizes="64px" preload unoptimized className="object-cover" />
         </Link>
@@ -35,7 +36,7 @@ function Profile() {
         actually work.
       </p>
 
-      <div className="border-t border-[#eee]" />
+      <div className="border-t border-line" />
 
       <div className="space-y-2.5">
         <p className="text-[13px] text-body">
@@ -59,7 +60,7 @@ function Profile() {
         </div>
       </div>
 
-      <div className="border-t border-[#eee]" />
+      <div className="border-t border-line" />
 
       <div className="space-y-2.5">
         <div className="flex items-center gap-2">
@@ -88,7 +89,7 @@ function Profile() {
         </div>
       </div>
 
-      <div className="border-t border-[#eee]" />
+      <div className="border-t border-line" />
 
       <div className="space-y-3">
         <a
@@ -138,13 +139,16 @@ export default function Shell({ children }: { children: React.ReactNode }) {
       <main className="min-h-screen w-full px-5 sm:px-8 lg:px-10 xl:px-14">
         <div className="flex flex-col pb-24 pt-8 lg:flex-row lg:items-start lg:pt-10">
           {/* Mobile top nav */}
-          <div className="sticky top-0 z-40 -mx-5 mb-5 border-b border-[#eee] bg-paper/90 px-5 py-3 backdrop-blur-md sm:-mx-8 sm:px-8 lg:hidden">
+          <div className="sticky top-0 z-40 -mx-5 mb-5 border-b border-line bg-paper/90 px-5 py-3 backdrop-blur-md sm:-mx-8 sm:px-8 lg:hidden">
             <nav aria-label="Site" className="flex items-center gap-5">
               {navLinks.map((l) => (
                 <a key={l.href} href={l.href} className="text-[14px] text-body transition-colors hover:text-ink">
                   {l.label}
                 </a>
               ))}
+              <span className="ml-auto">
+                <ThemeToggle />
+              </span>
             </nav>
           </div>
 
@@ -165,9 +169,12 @@ export default function Shell({ children }: { children: React.ReactNode }) {
                   {l.label}
                 </a>
               ))}
+              <span className="ml-auto">
+                <ThemeToggle />
+              </span>
             </nav>
             {children}
-            <footer className="mt-24 border-t border-[#eee] pt-6 text-[12px] text-mute">
+            <footer className="mt-24 border-t border-line pt-6 text-[12px] text-mute">
               © {new Date().getFullYear()} Naiyar Hasnain · Built with Next.js
             </footer>
           </div>
