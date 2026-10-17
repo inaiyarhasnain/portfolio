@@ -31,14 +31,14 @@ const modes = [
     note: "Non-intrusive visual companion",
     description:
       "Observes the active application via Windows Graphics Capture. Draws a glowing animated cursor, pulse ring, and instruction callout right over the target button or form field without hijacking the user's mouse. Verifies completion visually before advancing.",
-    color: "bg-[#e6f4ea] text-[#137333]",
+    color: "bg-[#e6f4ea] text-[#137333] dark:bg-[#137333]/20 dark:text-[#4ade80]",
   },
   {
     title: "Autonomous Mode (“Agent acts”)",
     note: "Supervised agentic execution",
     description:
       "When granted explicit consent, the agent can click, scroll, type, and verify steps in the target window. Supports complex multi-app handoffs (e.g., researching in Chrome then launching WhatsApp Desktop to share). Moving the physical mouse instantly pauses control.",
-    color: "bg-[#fce8e6] text-[#c5221f]",
+    color: "bg-[#fce8e6] text-[#c5221f] dark:bg-[#c5221f]/20 dark:text-[#f87171]",
   },
 ];
 
@@ -196,7 +196,7 @@ export default function StepSight() {
           >
             ← all projects
           </Link>
-          <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#059669]">
+          <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#059669] dark:text-[#34d399]">
             OpenAI DevDay Exchange · All-Night Hackathon · Kochi, Kerala
           </p>
           <h1 className="mt-3 font-serif text-[44px] leading-[1.02] tracking-[-0.02em] text-ink sm:text-[56px]">
@@ -204,7 +204,7 @@ export default function StepSight() {
           </h1>
           <p className="mt-3 max-w-xl font-serif text-[22px] leading-snug text-body">
             A visual desktop companion &amp; autonomous guide,{" "}
-            <em className="text-[#059669]">built overnight in Kochi.</em>
+            <em className="text-[#059669] dark:text-[#34d399]">built overnight in Kochi.</em>
           </p>
           <p className="mt-4 max-w-xl text-[15px] leading-7 text-body">
             We travelled to Kochi, Kerala for the OpenAI DevDay Exchange all-night hackathon
@@ -281,7 +281,7 @@ export default function StepSight() {
           <SectionHeading>the problem &amp; the idea.</SectionHeading>
           <p className="font-serif text-[24px] leading-snug text-ink">
             Bridging human intent and complex software,{" "}
-            <em className="text-[#059669]">without brittle selectors</em>.
+            <em className="text-[#059669] dark:text-[#34d399]">without brittle selectors</em>.
           </p>
           <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-body">
             <p>
@@ -328,7 +328,7 @@ export default function StepSight() {
           <SectionHeading>safety by design.</SectionHeading>
           <p className="font-serif text-[24px] leading-snug text-ink">
             Input authority requires{" "}
-            <em className="text-[#059669]">uncompromising guardrails</em>.
+            <em className="text-[#059669] dark:text-[#34d399]">uncompromising guardrails</em>.
           </p>
           <p className="mt-3 text-[15px] leading-relaxed text-body">
             Giving an AI agent the ability to control mouse clicks and keystrokes is inherently
@@ -356,7 +356,7 @@ export default function StepSight() {
                     className="absolute bottom-[-24px] left-[13px] top-7 w-px bg-line"
                   />
                 )}
-                <span className="absolute left-0 top-0 inline-flex h-7 w-7 items-center justify-center rounded-full border-[1.5px] border-ink bg-white font-serif text-[14px] text-ink">
+                <span className="absolute left-0 top-0 inline-flex h-7 w-7 items-center justify-center rounded-full border-[1.5px] border-ink bg-paper font-serif text-[14px] text-ink">
                   {i + 1}
                 </span>
                 <h3 className="text-[15px] font-semibold text-ink">{s.title}</h3>
@@ -371,7 +371,7 @@ export default function StepSight() {
           <SectionHeading>mobile remote controller.</SectionHeading>
           <p className="font-serif text-[24px] leading-snug text-ink">
             Control &amp; monitor the desktop agent{" "}
-            <em className="text-[#059669]">from your phone</em>.
+            <em className="text-[#059669] dark:text-[#34d399]">from your phone</em>.
           </p>
           <p className="mt-3 text-[15px] leading-relaxed text-body">
             In addition to the Windows desktop client, we built an installable Progressive Web App (PWA)
@@ -390,7 +390,7 @@ export default function StepSight() {
             <div className="divide-y divide-line/60">
               {architectureStack.map((item) => (
                 <div key={item.layer} className="py-3.5 first:pt-0 last:pb-0">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#059669]">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#059669] dark:text-[#34d399]">
                     {item.layer}
                   </p>
                   <p className="mt-1 font-mono text-[13px] text-ink">{item.items}</p>
@@ -405,7 +405,7 @@ export default function StepSight() {
           <SectionHeading>the overnight sprint in kochi.</SectionHeading>
           <p className="font-serif text-[24px] leading-snug text-ink">
             Building through the night,{" "}
-            <em className="text-[#059669]">from scratch to demo</em>.
+            <em className="text-[#059669] dark:text-[#34d399]">from scratch to demo</em>.
           </p>
           <p className="mt-3 text-[15px] leading-relaxed text-body">
             We arrived in Kochi for the OpenAI DevDay Exchange hackathon ready to build something ambitious.
@@ -447,7 +447,7 @@ export default function StepSight() {
           <SectionHeading>download &amp; live pilot.</SectionHeading>
           <div className="surface-soft flex flex-col justify-between gap-4 p-5 sm:flex-row sm:items-center sm:p-6">
             <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#059669]">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#059669] dark:text-[#34d399]">
                 Public Release · Windows x64
               </p>
               <h3 className="mt-1 font-serif text-[20px] font-semibold text-ink">

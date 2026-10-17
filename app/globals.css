@@ -2,7 +2,7 @@
 
 @variant dark (&:where(.dark, .dark *));
 
-@theme inline {
+:root {
   --color-paper: #fafafa;
   --color-ink: #111111;
   --color-body: #666666;
@@ -10,6 +10,28 @@
   --color-faint: #aaaaaa;
   --color-line: #ececec;
   --color-accent: #c8a882;
+}
+
+html.dark,
+.dark {
+  --color-paper: #0d0d0d;
+  --color-ink: #f0f0f0;
+  --color-body: #a0a0a0;
+  --color-mute: #787878;
+  --color-faint: #666666;
+  --color-line: #252525;
+  --color-accent: #c8a882;
+  color-scheme: dark;
+}
+
+@theme {
+  --color-paper: var(--color-paper);
+  --color-ink: var(--color-ink);
+  --color-body: var(--color-body);
+  --color-mute: var(--color-mute);
+  --color-faint: var(--color-faint);
+  --color-line: var(--color-line);
+  --color-accent: var(--color-accent);
   --font-sans: var(--font-geist-sans);
   --font-serif: var(--font-instrument);
   --font-mono: var(--font-geist-mono);
@@ -23,17 +45,6 @@ html {
   color-scheme: light;
   scroll-behavior: smooth;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-html.dark {
-  --color-paper: #0d0d0d;
-  --color-ink: #f0f0f0;
-  --color-body: #a0a0a0;
-  --color-mute: #787878;
-  --color-faint: #555555;
-  --color-line: #252525;
-  --color-accent: #c8a882;
-  color-scheme: dark;
 }
 
 body {
@@ -332,7 +343,7 @@ html:not(.dark) ::selection {
 .dark .social-btn {
   border: 1px solid #272727;
   background: #181818;
-  color: #666;
+  color: #a0a0a0;
 }
 
 .dark .social-btn:hover {
@@ -349,7 +360,7 @@ html:not(.dark) ::selection {
 /* ── Links ───────────────────────────────────────────────── */
 
 .link-u {
-  color: #111;
+  color: var(--color-ink);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: #d4d4d4;
@@ -357,16 +368,33 @@ html:not(.dark) ::selection {
 }
 
 .link-u:hover {
-  text-decoration-color: #111;
+  text-decoration-color: var(--color-ink);
 }
 
 .dark .link-u {
-  color: #e0e0e0;
-  text-decoration-color: #3a3a3a;
+  color: var(--color-ink);
+  text-decoration-color: #555;
 }
 
 .dark .link-u:hover {
-  text-decoration-color: #e0e0e0;
+  text-decoration-color: var(--color-ink);
+}
+
+/* ── Evidence Badges in Dark Mode ────────────────────────── */
+
+.dark .evidence[class*="bg-[#f6ecd4]"] {
+  background: rgba(246, 236, 212, 0.12);
+  color: #fde68a;
+}
+
+.dark .evidence[class*="bg-[#ebe7f7]"] {
+  background: rgba(235, 231, 247, 0.12);
+  color: #c4b5fd;
+}
+
+.dark .evidence[class*="bg-[#e2f0f3]"] {
+  background: rgba(226, 240, 243, 0.12);
+  color: #67e8f9;
 }
 
 /* ── Theme Toggle Button ─────────────────────────────────── */
@@ -396,7 +424,7 @@ html:not(.dark) ::selection {
 .dark .theme-toggle-btn {
   border: 1px solid #272727;
   background: #181818;
-  color: #999;
+  color: #a0a0a0;
 }
 
 .dark .theme-toggle-btn:hover {

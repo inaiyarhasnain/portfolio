@@ -54,14 +54,14 @@ export default function ResQGrid() {
           <Link href="/#projects" className="text-[13px] text-mute transition-colors hover:text-ink">
             ← all projects
           </Link>
-          <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#b5523b]">
+          <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#b5523b] dark:text-[#fb923c]">
             AWS First Commit Hackathon 2026 · WeMakeDevs × AWS · Bengaluru · Team COM.SOLOSTACK
           </p>
           <h1 className="mt-3 font-serif text-[44px] leading-[1.02] tracking-[-0.02em] text-ink sm:text-[56px]">
             ResQGrid
           </h1>
           <p className="mt-3 max-w-xl font-serif text-[22px] leading-snug text-body">
-            Keeping relief connected <em className="text-[#b5523b]">when networks fail.</em>
+            Keeping relief connected <em className="text-[#b5523b] dark:text-[#fb923c]">when networks fail.</em>
           </p>
           <p className="mt-4 max-w-xl text-[15px] leading-7 text-body">
             Floods and other emergencies take the network down exactly when people need to ask for
@@ -90,12 +90,12 @@ export default function ResQGrid() {
         <section>
           <SectionHeading>the idea.</SectionHeading>
           <p className="font-serif text-[24px] leading-snug text-ink">
-            One grid, three roles, <em className="text-[#b5523b]">zero dependence on signal</em>.
+            One grid, three roles, <em className="text-[#b5523b] dark:text-[#fb923c]">zero dependence on signal</em>.
           </p>
           <ul className="mt-6 grid gap-3 sm:grid-cols-3">
             {roles.map((r, i) => (
               <li key={r.title} className="surface-soft p-4">
-                <span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-[#f6e3de] text-[12px] font-semibold text-[#b5523b]">
+                <span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-[#f6e3de] dark:bg-[#b5523b]/20 text-[12px] font-semibold text-[#b5523b] dark:text-[#f87171]">
                   {i + 1}
                 </span>
                 <p className="mt-3 text-[14px] font-medium text-ink">{r.title}</p>
@@ -113,7 +113,7 @@ export default function ResQGrid() {
                 {i < flow.length - 1 && (
                   <span aria-hidden="true" className="absolute bottom-[-24px] left-[13px] top-7 w-px bg-line" />
                 )}
-                <span className="absolute left-0 top-0 inline-flex h-7 w-7 items-center justify-center rounded-full border-[1.5px] border-ink bg-white font-serif text-[14px] text-ink">
+                <span className="absolute left-0 top-0 inline-flex h-7 w-7 items-center justify-center rounded-full border-[1.5px] border-ink bg-paper font-serif text-[14px] text-ink">
                   {i + 1}
                 </span>
                 <h3 className="text-[15px] font-semibold text-ink">{s.title}</h3>
@@ -181,7 +181,7 @@ export default function ResQGrid() {
         <section>
           <SectionHeading>what it was really about.</SectionHeading>
           <p className="font-serif text-[24px] leading-snug text-ink">
-            Not another app: <em className="text-[#b5523b]">learning AWS</em>, understanding cloud
+            Not another app: <em className="text-[#b5523b] dark:text-[#fb923c]">learning AWS</em>, understanding cloud
             deployment, and turning an idea into something that actually runs.
           </p>
           <div className="mt-6">

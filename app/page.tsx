@@ -133,7 +133,7 @@ export default function Home() {
               <div className="flex items-start justify-between gap-3 pt-4">
                 <h3 className="min-w-0 text-[16px] font-semibold leading-snug tracking-[-0.02em] text-ink">
                   <Link href="/projects/stepsight">StepSight</Link>
-                  <span className="ml-2 rounded-full border border-[#059669]/40 bg-[#059669]/10 px-2 py-0.5 align-middle text-[10px] font-medium text-[#047857]">
+                  <span className="ml-2 rounded-full border border-[#059669]/40 bg-[#059669]/10 dark:bg-[#059669]/20 px-2 py-0.5 align-middle text-[10px] font-medium text-[#047857] dark:text-[#4ade80]">
                     Hackathon · Team
                   </span>
                 </h3>
@@ -154,7 +154,7 @@ export default function Home() {
               </p>
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {["C#", "Avalonia 12", ".NET 10", "Python", "FastAPI", "Gemini Vision", "AWS"].map((t) => (
-                  <span key={t} className="rounded bg-ink/[0.04] px-2 py-0.5 font-mono text-[11px] text-body">
+                  <span key={t} className="rounded bg-ink/[0.04] dark:bg-white/[0.08] px-2 py-0.5 font-mono text-[11px] text-body">
                     {t}
                   </span>
                 ))}
@@ -188,7 +188,7 @@ export default function Home() {
               <div className="flex items-start justify-between gap-3 pt-4">
                 <h3 className="min-w-0 text-[16px] font-semibold leading-snug tracking-[-0.02em] text-ink">
                   <Link href="/projects/pawbridge">PawBridge</Link>
-                  <span className="ml-2 rounded-full border border-accent/50 bg-accent/10 px-2 py-0.5 align-middle text-[10px] font-medium text-[#7a5c38]">
+                  <span className="ml-2 rounded-full border border-accent/50 bg-accent/10 dark:bg-accent/20 px-2 py-0.5 align-middle text-[10px] font-medium text-[#7a5c38] dark:text-[#e8c49a]">
                     Hackathon · Team
                   </span>
                 </h3>
@@ -236,7 +236,7 @@ export default function Home() {
               <div className="flex items-start justify-between gap-3 pt-4">
                 <h3 className="min-w-0 text-[16px] font-semibold leading-snug tracking-[-0.02em] text-ink">
                   <Link href="/projects/resqgrid">ResQGrid</Link>
-                  <span className="ml-2 rounded-full border border-accent/50 bg-accent/10 px-2 py-0.5 align-middle text-[10px] font-medium text-[#7a5c38]">
+                  <span className="ml-2 rounded-full border border-accent/50 bg-accent/10 dark:bg-accent/20 px-2 py-0.5 align-middle text-[10px] font-medium text-[#7a5c38] dark:text-[#e8c49a]">
                     Hackathon · Team
                   </span>
                 </h3>
@@ -258,7 +258,7 @@ export default function Home() {
               </p>
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {["Angular", "Spring Boot", "Java 21", "MySQL", "AWS Amplify", "ECS Fargate"].map((t) => (
-                  <span key={t} className="rounded bg-ink/[0.04] px-2 py-0.5 font-mono text-[11px] text-body">
+                  <span key={t} className="rounded bg-ink/[0.04] dark:bg-white/[0.08] px-2 py-0.5 font-mono text-[11px] text-body">
                     {t}
                   </span>
                 ))}
@@ -332,7 +332,7 @@ export default function Home() {
               <ul className="space-y-2 pt-3">
                 {e.points.map((p) => (
                   <li key={p} className="flex items-start gap-2.5 text-[14px] leading-relaxed text-body">
-                    <span className="mt-[9px] h-1 w-1 flex-none rounded-full bg-[#ccc]" />
+                    <span className="mt-[9px] h-1 w-1 flex-none rounded-full bg-[#ccc] dark:bg-[#666]" />
                     {p}
                   </li>
                 ))}
@@ -393,7 +393,7 @@ export default function Home() {
                       <span key={skill} className="chip">
                         {skill}
                         {learning.includes(skill) && (
-                          <span className="ml-1.5 rounded bg-[#e7f3e3] px-1 text-[10px] text-[#2f6b3a]">learning</span>
+                          <span className="ml-1.5 rounded bg-[#e7f3e3] dark:bg-[#1a3a20] px-1 text-[10px] text-[#2f6b3a] dark:text-[#86efac]">learning</span>
                         )}
                       </span>
                     ))}

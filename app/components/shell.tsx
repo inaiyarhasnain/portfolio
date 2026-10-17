@@ -124,7 +124,7 @@ export function SectionHeading({ children }: { children: string }) {
   return (
     <div className="mb-7 flex items-end gap-4">
       <h2 className="flex-none font-serif text-[24px] italic tracking-[-0.02em] text-ink">{children}</h2>
-      <span aria-hidden="true" className="mb-[11px] hidden h-px min-w-8 flex-1 bg-gradient-to-r from-[#d8d8d8] to-transparent sm:block" />
+      <span aria-hidden="true" className="mb-[11px] hidden h-px min-w-8 flex-1 bg-gradient-to-r from-line to-transparent sm:block" />
     </div>
   );
 }

@@ -97,7 +97,7 @@ export default function PawBridge() {
           <Link href="/#projects" className="text-[13px] text-mute transition-colors hover:text-ink">
             ← all projects
           </Link>
-          <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#a07a4c]">
+          <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#a07a4c] dark:text-[#d4af37]">
             Claude Build Day · Claude Creator Commons · Bengaluru · 26–27 Sept 2026
           </p>
           <h1 className="mt-3 font-serif text-[44px] leading-[1.02] tracking-[-0.02em] text-ink sm:text-[56px]">
@@ -105,7 +105,7 @@ export default function PawBridge() {
           </h1>
           <p className="mt-3 max-w-xl font-serif text-[22px] leading-snug text-body">
             We built a dog-request detector in a cardboard box.{" "}
-            <em className="text-[#a07a4c]">In two days.</em>
+            <em className="text-[#a07a4c] dark:text-[#d4af37]">In two days.</em>
           </p>
           <p className="mt-4 max-w-xl text-[15px] leading-7 text-body">
             It notices when a dog <strong className="font-semibold text-ink">may</strong> want
@@ -148,12 +148,12 @@ export default function PawBridge() {
           <SectionHeading>the problem.</SectionHeading>
           <p className="font-serif text-[24px] leading-snug text-ink">
             Dogs signal all the time. Owners miss it. &ldquo;Translators&rdquo;{" "}
-            <em className="text-[#b5523b]">overclaim</em>.
+            <em className="text-[#b5523b] dark:text-[#fb923c]">overclaim</em>.
           </p>
           <ul className="mt-6 grid gap-3 sm:grid-cols-3">
             {signals.map((s, i) => (
               <li key={s.title} className="surface-soft p-4">
-                <span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-[#f6e3de] text-[12px] font-semibold text-[#b5523b]">
+                <span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-[#f6e3de] dark:bg-[#b5523b]/20 text-[12px] font-semibold text-[#b5523b] dark:text-[#f87171]">
                   {i + 1}
                 </span>
                 <p className="mt-3 text-[14px] font-medium text-ink">{s.title}</p>
@@ -170,11 +170,11 @@ export default function PawBridge() {
           </p>
           <div className="surface-soft mt-5 p-5">
             <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-faint">What that looks like</p>
-            <ul className="mt-3 divide-y divide-dashed divide-[#e6e6e6] text-[14px] text-body">
+            <ul className="mt-3 divide-y divide-dashed divide-line text-[14px] text-body">
               <li className="flex items-center gap-3 py-2"><span className="evidence bg-[#f6ecd4] text-[#7a5c1e]">board</span>came within 7.7 cm, device still, 0 taps</li>
               <li className="flex items-center gap-3 py-2"><span className="evidence bg-[#ebe7f7] text-[#5a4a9a]">vision</span>play bow, gaze on a tennis ball</li>
               <li className="flex items-center gap-3 py-2"><span className="evidence bg-[#e2f0f3] text-[#2f6a78]">audio</span>two brief bark-like sounds</li>
-              <li className="pt-2 font-medium text-[#b5523b]">→ possible play invitation · confidence 0.66</li>
+              <li className="pt-2 font-medium text-[#b5523b] dark:text-[#fb923c]">→ possible play invitation · confidence 0.66</li>
             </ul>
           </div>
         </section>
@@ -238,7 +238,7 @@ export default function PawBridge() {
         <section>
           <SectionHeading>how it works.</SectionHeading>
           <p className="font-serif text-[24px] leading-snug text-ink">
-            One trigger, six steps, <em className="text-[#b5523b]">~17 seconds</em>.
+            One trigger, six steps, <em className="text-[#b5523b] dark:text-[#fb923c]">~17 seconds</em>.
           </p>
           <ol className="mt-6 space-y-6">
             {steps.map((s, i) => (
@@ -246,19 +246,19 @@ export default function PawBridge() {
                 {i < steps.length - 1 && (
                   <span aria-hidden="true" className="absolute bottom-[-24px] left-[13px] top-7 w-px bg-line" />
                 )}
-                <span className="absolute left-0 top-0 inline-flex h-7 w-7 items-center justify-center rounded-full border-[1.5px] border-ink bg-white font-serif text-[14px] text-ink">
+                <span className="absolute left-0 top-0 inline-flex h-7 w-7 items-center justify-center rounded-full border-[1.5px] border-ink bg-paper font-serif text-[14px] text-ink">
                   {i + 1}
                 </span>
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                   <h3 className="text-[15px] font-semibold text-ink">{s.title}</h3>
-                  <span className="rounded bg-[#eef1ea] px-1.5 py-0.5 font-mono text-[11px] text-[#4b5a45]">{s.time}</span>
+                  <span className="rounded bg-[#eef1ea] dark:bg-[#2a3526] px-1.5 py-0.5 font-mono text-[11px] text-[#4b5a45] dark:text-[#86efac]">{s.time}</span>
                 </div>
                 <p className="mt-1 text-[14px] leading-relaxed text-body">{s.body}</p>
               </li>
             ))}
           </ol>
-          <p className="mt-6 rounded-xl bg-[#eef1ea] px-5 py-4 text-[14px] text-body">
-            <span className="font-serif text-[18px] text-[#b5523b]">Offline?</span> The rules pick the
+          <p className="mt-6 rounded-xl bg-[#eef1ea] dark:bg-[#1e2a1a] px-5 py-4 text-[14px] text-body">
+            <span className="font-serif text-[18px] text-[#b5523b] dark:text-[#fb923c]">Offline?</span> The rules pick the
             action. The device always responds.
           </p>
         </section>
@@ -267,7 +267,7 @@ export default function PawBridge() {
         <section>
           <SectionHeading>sunday, it works.</SectionHeading>
           <p className="font-serif text-[24px] leading-snug text-ink">
-            Hand near the sensor. Seventeen seconds later, <em className="text-[#b5523b]">a beep</em>.
+            Hand near the sensor. Seventeen seconds later, <em className="text-[#b5523b] dark:text-[#fb923c]">a beep</em>.
           </p>
           <div className="mt-6 shot">
             <div className="shot-bar"><span /><span /><span /></div>
@@ -278,17 +278,17 @@ export default function PawBridge() {
           <p className="mt-3 text-[13px] text-mute">The live dashboard: trigger, capture, cleaning, rules, Claude agents and action, step by step.</p>
 
           <div className="mt-8 grid items-start gap-6 sm:grid-cols-[auto_1fr]">
-            <div className="rounded-xl border-4 border-[#3b4034] bg-[#b8e04a] px-4 py-3 font-mono text-[18px] leading-tight text-[#1f2a10] shadow-[0_6px_18px_rgba(0,0,0,0.08)]">
+            <div className="rounded-xl border-4 border-[#3b4034] dark:border-[#5a7a30] bg-[#b8e04a] dark:bg-[#3a5a10] px-4 py-3 font-mono text-[18px] leading-tight text-[#1f2a10] dark:text-[#d4f788] shadow-[0_6px_18px_rgba(0,0,0,0.08)]">
               PLAY INVITATION
               <br />
               via Claude
             </div>
             <div>
-              <p className="font-serif text-[26px] leading-none text-[#b5523b]">possible play invitation</p>
+              <p className="font-serif text-[26px] leading-none text-[#b5523b] dark:text-[#fb923c]">possible play invitation</p>
               <p className="mt-2 text-[14px] text-body">
                 Rules said <em>curiosity · 0.50</em>. Claude, with the clip: <strong className="text-ink">0.66</strong>.
               </p>
-              <div className="mt-3 h-2 overflow-hidden rounded-full bg-[#e6e9e1]">
+              <div className="mt-3 h-2 overflow-hidden rounded-full bg-[#e6e9e1] dark:bg-[#2a3026]">
                 <div className="h-full w-[66%] rounded-full bg-gradient-to-r from-[#d9a441] to-[#b5523b]" />
               </div>
             </div>
@@ -298,8 +298,8 @@ export default function PawBridge() {
             <li className="flex items-center gap-3"><span className="evidence bg-[#e2f0f3] text-[#2f6a78]">audio</span>two brief bark-like events</li>
             <li className="flex items-center gap-3"><span className="evidence bg-[#f6ecd4] text-[#7a5c1e]">board</span>7.7 cm, no taps — device not pawed</li>
           </ul>
-          <blockquote className="mt-5 border-l-[3px] border-[#d9a441] bg-[#fdf8e8] px-5 py-3 text-[14px] text-body">
-            <span className="font-semibold text-[#8a6412]">Claude&apos;s own caveat:</span> &ldquo;The playful
+          <blockquote className="mt-5 border-l-[3px] border-[#d9a441] bg-[#fdf8e8] dark:bg-[#2a2310] px-5 py-3 text-[14px] text-body">
+            <span className="font-semibold text-[#8a6412] dark:text-[#fde047]">Claude&apos;s own caveat:</span> &ldquo;The playful
             signals come only from the clip, not the sensor board.&rdquo;
           </blockquote>
         </section>
@@ -309,12 +309,12 @@ export default function PawBridge() {
           <SectionHeading>what we learned.</SectionHeading>
           <p className="font-serif text-[26px] leading-snug text-ink">
             &ldquo;The hardest part wasn&apos;t getting an answer from AI. It was getting an{" "}
-            <em className="text-[#a07a4c]">honest</em> one.&rdquo;
+            <em className="text-[#a07a4c] dark:text-[#d4af37]">honest</em> one.&rdquo;
           </p>
           <ol className="mt-6 space-y-3">
             {lessons.map((l, i) => (
               <li key={l.title} className="flex gap-3 text-[14px] leading-relaxed text-body">
-                <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-md border border-[#e6e6e6] bg-white text-[12px] font-semibold text-ink">
+                <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-md border border-line bg-paper text-[12px] font-semibold text-ink">
                   {i + 1}
                 </span>
                 <span>
@@ -324,7 +324,7 @@ export default function PawBridge() {
             ))}
           </ol>
           <p className="surface-soft mt-6 p-5 text-[14px] leading-relaxed text-body">
-            <strong className="font-semibold text-[#a07a4c]">We didn&apos;t win.</strong> We gave it a
+            <strong className="font-semibold text-[#a07a4c] dark:text-[#d4af37]">We didn&apos;t win.</strong> We gave it a
             fight, shipped a working device, 72 passing tests and a live demo, and learned more in two
             days than in most months.
           </p>
@@ -337,7 +337,7 @@ export default function PawBridge() {
         <section>
           <SectionHeading>the team.</SectionHeading>
           <p className="font-serif text-[24px] leading-snug text-ink">
-            Four people, one box, <em className="text-[#b5523b]">two days</em>.
+            Four people, one box, <em className="text-[#b5523b] dark:text-[#fb923c]">two days</em>.
           </p>
           <div className="mt-6 grid gap-5 sm:grid-cols-2">
             <Photo src="/pawbridge/team-demo.jpg" alt="Team Techno Crackers holding the PawBridge device and dashboard" ratio="aspect-[4/3]" />
@@ -348,7 +348,7 @@ export default function PawBridge() {
             {team.map((name) => (
               <li
                 key={name}
-                className={`rounded-lg border px-3 py-2 text-[14px] ${name === "Naiyar Hasnain" ? "border-ink bg-white font-medium text-ink" : "border-[#eee] bg-white text-body"}`}
+                className={`rounded-lg border px-3 py-2 text-[14px] ${name === "Naiyar Hasnain" ? "border-ink bg-paper font-medium text-ink" : "border-line bg-paper text-body"}`}
               >
                 {name}
                 {name === "Naiyar Hasnain" && <span className="ml-1.5 text-[11px] text-mute">(me)</span>}
